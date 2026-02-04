@@ -210,7 +210,7 @@ export default function Hero() {
               ref={titleRef}
               className="text-xl sm:text-2xl text-muted-foreground font-['Space_Grotesk']"
             >
-              Senior AI-Focused Software Engineer
+              Engineer | Researcher | Architect | AI Enthusiast
             </p>
 
             <p
@@ -262,7 +262,7 @@ export default function Hero() {
               {/* Image container */}
               <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-2 border-primary/30 animate-float">
                 <img
-                  src="/profile.jpg"
+                  src="/profile.png"
                   alt="Arun Kumar Mandal"
                   className="w-full h-full object-cover"
                 />

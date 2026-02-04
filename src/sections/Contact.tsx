@@ -39,11 +39,6 @@ const socialLinks = [
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/arunmandal53/',
   },
-  {
-    icon: Briefcase,
-    label: 'Portfolio',
-    href: 'https://usembassynepal.events/',
-  },
 ];
 
 export default function Contact() {
@@ -114,6 +109,23 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    // Send form data to email client using mailto
+    const form = formRef.current;
+    if (!form) return;
+    const formData = new FormData(form);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const subject = formData.get('subject');
+    const message = formData.get('message');
+
+    const mailtoLink = `mailto:arunmandal53@gmail.com?subject=${encodeURIComponent(
+      subject as string
+    )}&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\n${message}`
+    )}`;
+
+    window.location.href = mailtoLink;
 
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
@@ -186,6 +198,7 @@ export default function Contact() {
                       Name
                     </label>
                     <Input
+                      name="name"
                       placeholder="Your name"
                       required
                       className="bg-background/50"
@@ -196,6 +209,7 @@ export default function Contact() {
                       Email
                     </label>
                     <Input
+                      name="email"
                       type="email"
                       placeholder="your@email.com"
                       required
@@ -209,6 +223,7 @@ export default function Contact() {
                     Subject
                   </label>
                   <Input
+                    name="subject"
                     placeholder="What's this about?"
                     required
                     className="bg-background/50"
@@ -220,6 +235,7 @@ export default function Contact() {
                     Message
                   </label>
                   <Textarea
+                    name="message"
                     placeholder="Tell me about your project..."
                     required
                     rows={5}

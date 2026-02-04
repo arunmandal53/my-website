@@ -85,14 +85,14 @@ export default function Navigation() {
             >
               <Linkedin className="w-5 h-5" />
             </a>
-            <a
+            {/* <a
               href="https://usembassynepal.events/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-muted-foreground hover:text-foreground transition-colors"
             >
               <Briefcase className="w-5 h-5" />
-            </a>
+            </a> */}
           </div>
 
           {/* Mobile Menu Button */}

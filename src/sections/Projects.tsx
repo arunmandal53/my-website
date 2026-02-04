@@ -11,43 +11,55 @@ const projects = [
     title: 'US Embassy Nepal Event Platform',
     description:
       'High-traffic event management system handling thousands of concurrent registrations with automated email workflows and real-time analytics.',
-    image: '/project-embassy.jpg',
-    tags: ['Django', 'AWS', 'PostgreSQL', 'Redis'],
+    image: '/project-embassy.png',
+    tags: ['Django', 'AWS', 'PostgreSQL', 'React'],
     link: 'https://usembassynepal.events/',
     github: null,
-    stats: {
-      users: '10K+',
-      uptime: '99.9%',
-      response: '<100ms',
-    },
   },
   {
-    title: 'AI Heatwave Forecasting',
+    title: 'Bipad portal',
     description:
-      'Predictive meteorological system leveraging TensorFlow and meteorological data models for early disaster warning systems.',
-    image: '/project-heatwave.jpg',
-    tags: ['TensorFlow', 'Python', 'GeoPandas', 'FastAPI'],
-    link: null,
+      'BIPAD: Building Information Platform Against Disaster, a comprehensive disaster management system integrating GIS data and real-time alerts.',
+    image: '/project-bipadportal.png',
+    tags: ['Django', 'PostGIS', 'Geoserver', 'Maplibre'],
+    link: 'https://bipadportal.gov.np/',
     github: null,
-    stats: {
-      accuracy: '94%',
-      regions: '50+',
-      predictions: '1M+',
-    },
+  },
+  {
+    title: 'Shikshya.org',
+    description:
+      'Shikshya.org is an e-learning platform that acts as an aggregator platform, offering a wide range of online courses and certifications.',
+    image: '/project-shikshya.png',
+    tags: ['React', 'Django', 'Nginx', 'Streaming'],
+    link: "https://shikshya.org/",
+    github: null,
   },
   {
     title: 'Riskchanges Platform',
     description:
-      'Open-source risk assessment tool with 45% performance improvement through optimized code and database indexing.',
-    image: '/project-riskchanges.jpg',
-    tags: ['React', 'FastAPI', 'Docker', 'PostGIS'],
-    link: null,
+      'An open-source Spatial Decision Support tool for the analysis of Dynamic Multi-Hazard risk.',
+    image: '/project-riskchanges.png',
+    tags: ['React', 'Django', 'Docker', 'PostGIS', 'GDAL'],
+    link: "https://riskchanges.org/",
     github: null,
-    stats: {
-      performance: '+45%',
-      cost: '-40%',
-      users: '5K+',
-    },
+  },
+  {
+    title: 'Tagme App',
+    description:
+      'TagMe is a digital advocacy campaign and event management platform.',
+    image: '/project-tagme.png',
+    tags: ['React', 'Django', 'Flutter', 'Mapbox'],
+    link: "https://tagme.yilab.org.np/",
+    github: null,
+  },
+  {
+    title: 'HeatAI',
+    description:
+      'HeatAI is an AI-powered platform for analyzing and predicting heat-related data.',
+    image: '/project-heatai.png',
+    tags: ['React', 'Django', 'Flutter', 'Mapbox'],
+    link: "https://heatai.org/",
+    github: null,
   },
 ];
 
@@ -159,21 +171,6 @@ export default function Projects() {
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
-
-                    {/* Stats overlay */}
-                    <div className="absolute bottom-4 left-4 right-4 flex justify-between">
-                      {Object.entries(project.stats).map(([, value], i) => (
-                        <div
-                          key={i}
-                          className="bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full"
-                        >
-                          <span className="text-xs font-medium text-primary">
-                            {value}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
                   </div>
 
                   {/* Content */}
