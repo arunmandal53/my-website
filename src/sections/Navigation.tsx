@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Briefcase } from 'lucide-react';
+import { Menu, X, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
@@ -85,14 +85,6 @@ export default function Navigation() {
             >
               <Linkedin className="w-5 h-5" />
             </a>
-            {/* <a
-              href="https://usembassynepal.events/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <Briefcase className="w-5 h-5" />
-            </a> */}
           </div>
 
           {/* Mobile Menu Button */}
